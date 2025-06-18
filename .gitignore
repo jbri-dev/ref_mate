@@ -1,0 +1,56 @@
+# Flutter/Dart spezifisch
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+generated_plugin_registrant.dart
+
+# Temporäre Dateien
+*.tmp
+*.temp
+*.swp
+*.lock
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Pods/
+ios/.symlinks/
+ios/.flutter-plugins
+ios/.flutter-plugins-dependencies
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/Flutter/App.framework
+ios/Flutter/engine/
+
+# Android
+.android/
+.gradle/
+**/build/
+**/local.properties
+
+# VS Code
+.vscode/
+.history/
+
+# IntelliJ / Android Studio
+*.ipr
+*.iws
+.idea_modules/
+
+# Mac-spezifisch
+.DS_Store
+
+# Windows-spezifisch
+Thumbs.db
+
+# Andere Editoren / Tools
+*.log
+*.bak
+
+# Optional: test coverage
+coverage/
