@@ -1,7 +1,6 @@
 name: ref_mate
-description: "A new Flutter project."
-publish_to: 'none'
-version: 0.1.0
+description: "RefMate ist eine mobile App, die speziell für Basketball-Schiedsrichter:innen entwickelt wird, um den Alltag rund um das Pfeifen moderner, effizienter und stressfreier zu gestalten. Von Regeltraining über Ansetzungen bis hin zur Honorarübersicht – RefMate ist dein persönlicher Begleiter auf und neben dem Spielfeld."
+version: 1.0.0
 
 environment:
   sdk: ^3.8.1
@@ -13,7 +12,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
