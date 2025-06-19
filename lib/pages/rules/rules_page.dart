@@ -3,7 +3,6 @@ import 'package:ref_mate/pages/rules/rules_learn_page.dart';
 import 'package:ref_mate/pages/rules/rules_list_page.dart';
 import 'package:ref_mate/pages/rules/rules_test_page.dart';
 import 'package:ref_mate/pages/rules/rules_documents_page.dart';
-import 'package:ref_mate/constants/app_colors.dart';
 import 'package:ref_mate/pages/rules/widgets/rules_menu_button.dart';
 
 class RulesPage extends StatelessWidget {
