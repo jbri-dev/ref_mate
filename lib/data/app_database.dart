@@ -1,8 +1,8 @@
-import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:ref_mate/data/schemas/rules_schema.dart';
 import 'package:ref_mate/data/initial_data/rules_initial_data.dart';
+import 'package:ref_mate/data/schemas/rules_schema.dart';
+import 'package:sqflite/sqflite.dart';
 
 class AppDatabase {
   static Database? _db;
@@ -39,13 +39,5 @@ class AppDatabase {
         await _insertInitialData(db);
       },
     );
-  }
-
-  static Future close() async {
-    final db = _db;
-    if (db != null) {
-      await db.close();
-      _db = null;
-    }
   }
 }

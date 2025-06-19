@@ -1,45 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:ref_mate/pages/home/home_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ref_mate/pages/games/games_page.dart';
+import 'package:ref_mate/pages/home/home_page.dart';
 import 'package:ref_mate/pages/master_data/master_data_page.dart';
 import 'package:ref_mate/pages/rules/rules_page.dart';
+import 'package:ref_mate/providers/navigation_provider.dart';
 import 'package:ref_mate/widgets/app/navigation/app_navigation_bar.dart';
 
-class AppNavigationShell extends StatefulWidget {
+class AppNavigationShell extends ConsumerWidget {
   const AppNavigationShell({super.key});
 
-  @override
-  State<AppNavigationShell> createState() => _AppNavigationShellState();
-}
-
-class _AppNavigationShellState extends State<AppNavigationShell> {
-  int _selectedIndex = 0;
-
-  final List<Widget> _pages = const [
+  static final List<Widget> _pages = const [
     HomePage(),
     GamesPage(),
     MasterDataPage(),
     RulesPage(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedIndex = ref.watch(navigationIndexProvider);
     return Scaffold(
       body: AnimatedSwitcher(
         duration: const Duration(milliseconds: 180),
         transitionBuilder: (child, animation) =>
             FadeTransition(opacity: animation, child: child),
-        child: _pages[_selectedIndex],
+        child: _pages[selectedIndex],
       ),
       bottomNavigationBar: AppNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        currentIndex: selectedIndex,
+        onTap: (index) =>
+            ref.read(navigationIndexProvider.notifier).state = index,
       ),
     );
   }

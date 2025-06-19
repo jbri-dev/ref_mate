@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ref_mate/widgets/app/navigation/app_navigation_icon.dart';
 import 'package:ref_mate/constants/app_colors.dart';
+import 'package:ref_mate/constants/app_radii.dart';
+import 'package:ref_mate/constants/app_shadows.dart';
+import 'package:ref_mate/widgets/app/navigation/app_navigation_icon.dart';
 
 class AppNavigationBar extends StatelessWidget {
   final int currentIndex;
@@ -12,53 +14,40 @@ class AppNavigationBar extends StatelessWidget {
     required this.onTap,
   });
 
+  static const List<IconData> _icons = [
+    Icons.home_rounded,
+    Icons.sports_basketball_rounded,
+    Icons.storage_rounded,
+    Icons.rule_rounded,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
       child: PhysicalModel(
-        color: Colors.transparent,
+        color: AppColors.transparent,
         elevation: 8,
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: AppRadii.navigationBar,
         shadowColor: AppColors.secondary.withValues(alpha: .3),
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.navigation,
-            borderRadius: BorderRadius.circular(28),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: .13),
-                blurRadius: 14,
-                offset: const Offset(0, 4),
-              ),
-            ],
+            borderRadius: AppRadii.navigationBar,
+            boxShadow: [AppShadows.navigationBar],
           ),
           child: SizedBox(
             height: 64,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                AppNavigationIcon(
-                  icon: Icons.home_rounded,
-                  selected: currentIndex == 0,
-                  onTap: () => onTap(0),
+              children: List.generate(
+                _icons.length,
+                (index) => AppNavigationIcon(
+                  icon: _icons[index],
+                  selected: currentIndex == index,
+                  onTap: () => onTap(index),
                 ),
-                AppNavigationIcon(
-                  icon: Icons.sports_basketball_rounded,
-                  selected: currentIndex == 1,
-                  onTap: () => onTap(1),
-                ),
-                AppNavigationIcon(
-                  icon: Icons.storage_rounded,
-                  selected: currentIndex == 2,
-                  onTap: () => onTap(2),
-                ),
-                AppNavigationIcon(
-                  icon: Icons.rule_rounded,
-                  selected: currentIndex == 3,
-                  onTap: () => onTap(3),
-                ),
-              ],
+              ),
             ),
           ),
         ),

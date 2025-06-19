@@ -7,7 +7,8 @@ class AppColors {
   static const Color primaryText = Color(0xFF333333);
   static const Color secondary = Color(0xFF999999);
   static const Color navigation = Color(0xFF556080);
-  static const Color correct = Color(0xFF43A047); // grün
-  static const Color incorrect = Color(0xFFE53935); // rot
-  static const Color selected = Color(0xFF556080); // blau für Auswahl
+  static const Color correct = Color(0xFF43A047);
+  static const Color incorrect = Color(0xFFE53935);
+  static const Color selected = Color(0xFF556080);
+  static const Color transparent = Colors.transparent;
 }

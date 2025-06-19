@@ -1710,7 +1710,8 @@ final List<Map<String, dynamic>> rules = [
   {
     'id': 181,
     'number': 'K-29',
-    'question': 'Ein Eigenkorb kann einen, zwei oder drei Punkte zählen. Richtig?',
+    'question':
+        'Ein Eigenkorb kann einen, zwei oder drei Punkte zählen. Richtig?',
     'answer': 'nein',
     'answer_text':
         'Nein (Art. 16). Ein zufälliger Eigenkorb zählt 2 Punkte, drei Punkte können nur auf den gegnerischen Korb erzielt werden. Geht der Ball trotz Regelübertretung eines Verteidigers in den Korb, gilt die Korbwertung für den Werfer gemäß Regelübertretung (kein Eigenkorb).',
