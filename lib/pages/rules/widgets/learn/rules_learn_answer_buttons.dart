@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:ref_mate/constants/app_colors.dart';
 
 class RulesLearnAnswerButtons extends StatelessWidget {
   final void Function(String) onAnswer;
-  const RulesLearnAnswerButtons({super.key, required this.onAnswer});
+  final String? selected;
+  const RulesLearnAnswerButtons({
+    super.key,
+    required this.onAnswer,
+    this.selected,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final primary = Theme.of(context).colorScheme.primary;
+    final selectedColor = AppColors.selected;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.primary,
+            backgroundColor: selected == 'ja' ? selectedColor : primary,
             foregroundColor: Colors.white,
             elevation: 2,
             shape: RoundedRectangleBorder(
@@ -24,7 +32,7 @@ class RulesLearnAnswerButtons extends StatelessWidget {
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.primary,
+            backgroundColor: selected == 'nein' ? selectedColor : primary,
             foregroundColor: Colors.white,
             elevation: 2,
             shape: RoundedRectangleBorder(

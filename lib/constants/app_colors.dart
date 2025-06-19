@@ -9,4 +9,5 @@ class AppColors {
   static const Color navigation = Color(0xFF556080);
   static const Color correct = Color(0xFF43A047); // grün
   static const Color incorrect = Color(0xFFE53935); // rot
+  static const Color selected = Color(0xFF556080); // blau für Auswahl
 }
