@@ -64,6 +64,7 @@ Geplante Features:
 - **Keine Werbung** – werbefrei und nutzerfreundlich
 - **Open Source** – Quellcode öffentlich zugänglich
 - **Lizenz**: MIT License
+- **DSGVO**: [Datenschutzerklärung](https://jbri-dev.github.io/ref_mate/)
 
 ---
 
