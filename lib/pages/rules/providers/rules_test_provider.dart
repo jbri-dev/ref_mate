@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ref_mate/pages/rules/providers/rules_providers.dart';
 import 'dart:math';
 
 class RulesTestState {

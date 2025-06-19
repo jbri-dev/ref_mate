@@ -13,6 +13,7 @@ dependencies:
   path_provider: ^2.1.3
   flutter_riverpod: ^2.5.1
   url_launcher: ^6.3.1
+  open_file: ^3.5.10
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +23,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/pdfs/Offizielle_Basketball_Regeln.pdf
+    - assets/pdfs/Miniregeln.pdf
+    - assets/pdfs/Ausschreibung_Saison_2025.pdf
+    - assets/pdfs/MMV_Kriterien.pdf
