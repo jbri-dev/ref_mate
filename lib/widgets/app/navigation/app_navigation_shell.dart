@@ -31,7 +31,12 @@ class _AppNavigationShellState extends State<AppNavigationShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 180),
+        transitionBuilder: (child, animation) =>
+            FadeTransition(opacity: animation, child: child),
+        child: _pages[_selectedIndex],
+      ),
       bottomNavigationBar: AppNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
