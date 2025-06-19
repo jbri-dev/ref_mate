@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ref_mate/constants/app_theme.dart';
 import 'package:ref_mate/widgets/app/navigation/app_navigation_shell.dart';
+import 'package:ref_mate/data/app_database.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AppDatabase.database;
   runApp(const ProviderScope(child: MainApp()));
 }
 
