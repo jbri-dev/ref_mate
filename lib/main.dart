@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'constants/app_theme.dart';
-import 'widgets/app/main_navigation_widget.dart';
+import 'package:ref_mate/constants/app_theme.dart';
+import 'package:ref_mate/widgets/app/navigation/app_navigation_shell.dart';
 
 void main() {
   runApp(const ProviderScope(child: MainApp()));
@@ -12,6 +12,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: appTheme, home: const MainNavigationWidget());
+    return MaterialApp(theme: appTheme, home: const AppNavigationShell());
   }
 }
