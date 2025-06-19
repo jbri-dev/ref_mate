@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ref_mate/constants/app_colors.dart';
-import 'package:ref_mate/pages/rules/providers/rules_learn_providers.dart';
+import 'package:ref_mate/pages/rules/providers/rules_providers.dart';
 import 'package:ref_mate/widgets/common/app_back_button.dart';
 
 final rulesListSearchProvider = StateProvider<String>((ref) => '');

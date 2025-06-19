@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ref_mate/pages/rules/providers/rules_learn_providers.dart';
+import 'package:ref_mate/pages/rules/providers/rules_providers.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_answer_buttons.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_question_card.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_solution.dart';
