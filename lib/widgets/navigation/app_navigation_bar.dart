@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ref_mate/constants/app_colors.dart';
 import 'package:ref_mate/constants/app_radii.dart';
 import 'package:ref_mate/constants/app_shadows.dart';
-import 'package:ref_mate/widgets/app/navigation/app_navigation_icon.dart';
+import 'package:ref_mate/widgets/navigation/app_navigation_icon.dart';
 
 class AppNavigationBar extends StatelessWidget {
   final int currentIndex;

@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34620e55-0c88-4c90-9056-8485d04fac21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_radii.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants/app_shadows.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providers/navigation_provider.dart" afterDir="false" />
+    <list default="true" id="34620e55-0c88-4c90-9056-8485d04fac21" name="Changes" comment="refactor: organize imports and enhance navigation bar styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants/app_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/app_colors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants/app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/app_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/app_database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/app_database.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/initial_data/rules_initial_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/initial_data/rules_initial_data.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_bar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_shell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_shell.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref_mate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ref_mate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/navigation/app_navigation_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_icon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/navigation/app_navigation_icon.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/app/navigation/app_navigation_shell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/navigation/app_navigation_shell.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +75,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jonas\Desktop\workspace\ref_mate\lib\widgets" />
       <recent name="C:\Users\jonas\Desktop\workspace\ref_mate\lib\providers" />
     </key>
   </component>
@@ -102,8 +94,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750359796516</updated>
-      <workItem from="1750359798317" duration="888000" />
+      <workItem from="1750359798317" duration="1012000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor: organize imports and enhance navigation bar styling">
+      <option name="closed" value="true" />
+      <created>1750360708527</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750360708527</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -114,5 +115,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: organize imports and enhance navigation bar styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: organize imports and enhance navigation bar styling" />
   </component>
 </project>

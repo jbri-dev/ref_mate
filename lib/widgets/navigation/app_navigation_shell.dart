@@ -5,7 +5,7 @@ import 'package:ref_mate/pages/home/home_page.dart';
 import 'package:ref_mate/pages/master_data/master_data_page.dart';
 import 'package:ref_mate/pages/rules/rules_page.dart';
 import 'package:ref_mate/providers/navigation_provider.dart';
-import 'package:ref_mate/widgets/app/navigation/app_navigation_bar.dart';
+import 'package:ref_mate/widgets/navigation/app_navigation_bar.dart';
 
 class AppNavigationShell extends ConsumerWidget {
   const AppNavigationShell({super.key});
