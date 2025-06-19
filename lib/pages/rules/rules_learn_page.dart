@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ref_mate/pages/rules/providers/rules_learn_providers.dart';
+import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_answer_buttons.dart';
+import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_question_card.dart';
+import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_solution.dart';
 
 class RulesLearnPage extends ConsumerStatefulWidget {
   const RulesLearnPage({super.key});
@@ -76,127 +79,18 @@ class _RulesLearnPageState extends ConsumerState<RulesLearnPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Card(
-                    color: Theme.of(context).cardColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    elevation: 3,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Text(
-                        rule['question'] ?? '',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
+                  RulesLearnQuestionCard(question: rule['question'] ?? ''),
                   const SizedBox(height: 24),
-                  if (!_showSolution) ...[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Theme.of(
-                              context,
-                            ).colorScheme.primary,
-                            foregroundColor: Colors.white,
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 14,
-                            ),
-                          ),
-                          onPressed: () => _answer('ja', rule),
-                          child: const Text('Ja'),
-                        ),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Theme.of(
-                              context,
-                            ).colorScheme.primary,
-                            foregroundColor: Colors.white,
-                            elevation: 2,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 14,
-                            ),
-                          ),
-                          onPressed: () => _answer('nein', rule),
-                          child: const Text('Nein'),
-                        ),
-                      ],
+                  if (!_showSolution)
+                    RulesLearnAnswerButtons(
+                      onAnswer: (answer) => _answer(answer, rule),
+                    )
+                  else
+                    RulesLearnSolution(
+                      isCorrect: _isCorrect!,
+                      answerText: rule['answer_text'] ?? '',
+                      onNext: _loadRandomRule,
                     ),
-                  ] else ...[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          _isCorrect! ? Icons.check_circle : Icons.cancel,
-                          color: _isCorrect! ? Colors.green : Colors.red,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          _isCorrect! ? 'Richtig!' : 'Falsch!',
-                          style: TextStyle(
-                            color: _isCorrect! ? Colors.green : Colors.red,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            decoration: TextDecoration.none,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      rule['answer_text'] ?? '',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Theme.of(context).colorScheme.secondary,
-                        decoration: TextDecoration.none,
-                        fontFamily: Theme.of(
-                          context,
-                        ).textTheme.bodyMedium?.fontFamily,
-                        fontWeight:
-                            Theme.of(
-                              context,
-                            ).textTheme.bodyMedium?.fontWeight ??
-                            FontWeight.normal,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 16),
-                    TextButton.icon(
-                      icon: const Icon(Icons.refresh),
-                      label: const Text('Nächste Frage'),
-                      style: TextButton.styleFrom(
-                        foregroundColor: Theme.of(context).colorScheme.primary,
-                        textStyle: const TextStyle(fontSize: 16),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 10,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(24),
-                          side: BorderSide(
-                            color: Theme.of(context).colorScheme.primary,
-                            width: 1,
-                          ),
-                        ),
-                        backgroundColor: Colors.transparent,
-                      ),
-                      onPressed: _loadRandomRule,
-                    ),
-                  ],
                   const SizedBox(height: 24),
                 ],
               ),
