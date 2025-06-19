@@ -4,6 +4,7 @@ import 'package:ref_mate/pages/rules/providers/rules_learn_providers.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_answer_buttons.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_question_card.dart';
 import 'package:ref_mate/pages/rules/widgets/learn/rules_learn_solution.dart';
+import 'package:ref_mate/widgets/common/app_back_button.dart';
 
 class RulesLearnPage extends ConsumerStatefulWidget {
   const RulesLearnPage({super.key});
@@ -53,22 +54,7 @@ class _RulesLearnPageState extends ConsumerState<RulesLearnPage> {
             child: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.only(left: 8, top: 8),
-                child: TextButton.icon(
-                  icon: const Icon(Icons.arrow_back),
-                  label: const Text('Zurück'),
-                  style: TextButton.styleFrom(
-                    foregroundColor: Theme.of(context).colorScheme.primary,
-                    textStyle: const TextStyle(fontSize: 16),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 8,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                  ),
-                  onPressed: () => Navigator.of(context).pop(),
-                ),
+                child: AppBackButton(),
               ),
             ),
           ),
